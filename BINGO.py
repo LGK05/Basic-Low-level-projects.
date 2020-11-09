@@ -120,7 +120,7 @@ def wincheck():
 		return 'b'
 	else:
 		pass
-print('Welcome to BINGO. ""Developed By- GamerHemang""')
+print('Welcome to BINGO. ""Developed By- Shogun""')
 
 already_done = []
 while True:
