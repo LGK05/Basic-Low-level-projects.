@@ -1,9 +1,9 @@
 import tkinter as tk
+import tkinter.font as font
 import random
 
 root = tk.Tk()
 root.title("Bingo")
-root.geometry('400x300')
 
 def num_creator():
     nums = {}
@@ -41,7 +41,8 @@ col_ = 0
 
 buttons = []
 for i in tuple(human_nums_alt):
-    x=tk.Button(text=f"{str(i)}", command= lambda i=i,row_=row_,col_=col_:brains(i,row_,col_))
+    x=tk.Button(text=f"{str(i)}", padx = 30, pady = 30,command= lambda i=i,row_=row_,col_=col_:brains(i,row_,col_))
+    x['font']=font.Font(size=24)
     x.grid(row= row_, column=col_)
     buttons.append(x)
     col_ += 1
@@ -124,16 +125,22 @@ def brains(kill,row_,col_):
 
     if winner == 'h' or winner == 'b':
         if winner == 'h':
-            print("Hooman you take the victory this time")
+            print("Hooman you take the victory this time\n")
         if winner == 'b':
-            print("You have have fallen to the AI you weak hooman")
+            print("You have have fallen to the AI you weak hooman\n")
+        print("The bot's stadium-\n")
         stadium_set_up(bot_nums)
+        root.destroy()
     else:
         if wincheck(human_nums_alt_alt,list_of_nums) == 'h':
-            print("Hooman you take the victory this time")
+            print("Hooman you take the victory this time\n")
+            print("The bot's stadium-\n")
             stadium_set_up(bot_nums)
+            root.destroy()
         elif wincheck(human_nums_alt_alt,list_of_nums)== 'b':
-            print("You have have fallen to the AI you weak hooman")
+            print("You have have fallen to the AI you weak hooman\n")
+            print("The bot's stadium-\n")
             stadium_set_up(bot_nums)
+            root.destroy()
 
 tk.mainloop()
