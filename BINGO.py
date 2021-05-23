@@ -125,20 +125,20 @@ def brains(kill,row_,col_):
 
     if winner == 'h' or winner == 'b':
         if winner == 'h':
-            print("Hooman you take the victory this time\n")
+            print("BINGO! Hooman you take the victory this time\n")
         if winner == 'b':
-            print("You have have fallen to the AI you weak hooman\n")
+            print("BINGO! You have have fallen to the AI you weak hooman\n")
         print("The bot's stadium-\n")
         stadium_set_up(bot_nums)
         root.destroy()
     else:
         if wincheck(human_nums_alt_alt,list_of_nums) == 'h':
-            print("Hooman you take the victory this time\n")
+            print("BINGO! Hooman you take the victory this time\n")
             print("The bot's stadium-\n")
             stadium_set_up(bot_nums)
             root.destroy()
         elif wincheck(human_nums_alt_alt,list_of_nums)== 'b':
-            print("You have have fallen to the AI you weak hooman\n")
+            print("BINGO! You have have fallen to the AI you weak hooman\n")
             print("The bot's stadium-\n")
             stadium_set_up(bot_nums)
             root.destroy()
