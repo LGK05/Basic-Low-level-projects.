@@ -20,6 +20,18 @@ def num_creator():
         nums[i]=1
     return nums
 
+def stadium_set_up(nums):
+    
+    print(nums[0],   '    |    ',nums[1], '    |    ',nums[2], '    |    ',nums[3], '    |    ',nums[4], '    |    ')
+    print('\n')
+    print(nums[5],   '    |    ',nums[6], '    |    ',nums[7], '    |    ',nums[8], '    |    ',nums[9], '    |    ')
+    print('\n')
+    print(nums[10],  '    |    ',nums[11],'    |    ',nums[12],'    |    ',nums[13],'    |    ',nums[14],'    |    ')
+    print('\n')
+    print(nums[15],  '    |    ',nums[16],'    |    ',nums[17],'    |    ',nums[18],'    |    ',nums[19],'    |    ')
+    print('\n')
+    print(nums[20],  '    |    ',nums[21],'    |    ',nums[22],'    |    ',nums[23],'    |    ',nums[24],'    |    ')
+
 human_nums_alt = num_creator()
 bot_nums_alt = num_creator()
 human_nums= list(human_nums_alt)
@@ -115,10 +127,13 @@ def brains(kill,row_,col_):
             print("Hooman you take the victory this time")
         if winner == 'b':
             print("You have have fallen to the AI you weak hooman")
+        stadium_set_up(bot_nums)
     else:
         if wincheck(human_nums_alt_alt,list_of_nums) == 'h':
             print("Hooman you take the victory this time")
+            stadium_set_up(bot_nums)
         elif wincheck(human_nums_alt_alt,list_of_nums)== 'b':
             print("You have have fallen to the AI you weak hooman")
-            
+            stadium_set_up(bot_nums)
+
 tk.mainloop()
